@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Fleet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/styleTwo.css">
+</head>
+<body>
+    <nav>
+        <div >
+            <a href="indexl.html"><img class="logo" src="images/Hanover.png" alt="" width="100"></a>
+        </div>
+        <div class="navBox">
+            <div class="locationContact">
+                <a href=""><p><i class="fa-solid fa-location-dot"></i>  1212 Address St State, ST 28000</p></a>
+                <a href=""><p><i class="fa-solid fa-mobile-screen"></i>  555-555-5555</p></a>
+                <a href=""><p><i class="fa-regular fa-square-plus"><span id="totalAmount" class="addAmount"></span></i>  My Collection</p></a> 
+                <button id="bookNowBttn" class="bookNowBttn"><a href="">BOOK NOW</a></button>
+                <div id="bookForm" class="bookForm">
+                    <i onclick="closebookForm()" class="fa-solid fa-x"></i>                    
+                    <input type="text" name="" id="FirstName" placeholder="First Name*" required>
+                    <input type="text" name="" id="LastName" placeholder="Last Name*" required>
+                    <input type="email" name="" id="email" placeholder="Email*" required>
+                    <input type="number" name="" id="phnNum" placeholder="Phone Number*" required>
+                    <textarea name="message" id="message" cols="30" rows="10">Message</textarea>
+                    <button style="width: 200px; height: 40px; color: white; background-color: red; border: none; border-radius: 10px;">SEND</button>
+                </div>   
+            </div>
+            <div class="links">
+                <ul class="navLinks">
+                    <li><a href="">RENTAL FLEET</a></li>
+                    <li><a href="">VIP BLACK CHAUFFER</a></li>
+                    <li><a href="">THE EXPERIENCE</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">FREQUENTLY ASKED QUESTION</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>        
+    </nav>
+
+    <section  class="fleetDisplayContainer">
+        <h1>RENTAL FLEET</h1>
+       <div class="headerbox">
+            <div id="rentalOptions" class="rentalOptions">
+                <h3>MAKE<i class="fa-regular fa-square-caret-down"></i></h3>
+                <div id="optionsDisplayBox" class="optionsDisplayBox">
+                    <p class="fleetSelections">BENTLEY</p>
+                    <p class="fleetSelections">FERRARI</p>
+                    <p class="fleetSelections">LAMBORGHINI</p>
+                    <p class="fleetSelections">MCLAREN</p>
+                    <p class="fleetSelections">MERCEDES</p>
+                    <p class="fleetSelections">ROLLS ROYCE</p>
+                </div>               
+            </div>
+            <div class="sortOption">
+                    <select id="sortBy">
+                        <option value="">Set Sort By</option>
+                        <option value="makea-z" >MAKE:A-Z</option>
+                        <option value="makez-a" >MAKE:Z-A</option>
+                    </select>
+            </div>
+       </div>
+       <div id="fleetGallery" class="rentalDisplayBox DisplayBox"> 
+             
+       </div>
+    </section>
+
+    <section class="logoSlide">
+        <div class="imgaeSlider">
+            <img src="images/Lamborghini-black-background-color logo.jpg"  alt="">
+            <img src="images/Emblem-Bentley.jpg"  alt="">
+            <img src="images/ferrari-logo-brand-car-symbol-with-name-design-italian-automobile.jpg"  alt="">
+            <img src="images/McLaren-emblem black-background-logo.jpg"  alt="">
+            <img src="images/HD-wallpaper-mercedes-benz-logo-black-background-mercedes-emblem-mercedes-logo.jpg" alt="">
+            <img src="images/rolls-royce-brand-logo-symbol-white-design-british-car.jpg" alt="">
+        </div>
+        <div class="imgaeSlider">
+            <img src="images/Lamborghini-black-background-color logo.jpg"  alt="">
+            <img src="images/Emblem-Bentley.jpg"  alt="">
+            <img src="images/ferrari-logo-brand-car-symbol-with-name-design-italian-automobile.jpg"  alt="">
+            <img src="images/McLaren-emblem black-background-logo.jpg"  alt="">
+            <img src="images/HD-wallpaper-mercedes-benz-logo-black-background-mercedes-emblem-mercedes-logo.jpg" alt="">
+            <img src="images/rolls-royce-brand-logo-symbol-white-design-british-car.jpg" alt="">
+        </div>
+        <div class="imgaeSlider">
+            <img src="images/Lamborghini-black-background-color logo.jpg"  alt="">
+            <img src="images/Emblem-Bentley.jpg"  alt="">
+            <img src="images/ferrari-logo-brand-car-symbol-with-name-design-italian-automobile.jpg"  alt="">
+            <img src="images/McLaren-emblem black-background-logo.jpg"  alt="">
+            <img src="images/HD-wallpaper-mercedes-benz-logo-black-background-mercedes-emblem-mercedes-logo.jpg" alt="">
+            <img src="images/rolls-royce-brand-logo-symbol-white-design-british-car.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="connect">
+        <h2 style="color: red; font-size: 2rem; margin: 20px;">GET IN TOUCH WITH US</h2>
+        <div class="connectFormContainer">
+            <div class="connectForm">
+                <input type="text" placeholder="First Name*" name="" id="" required>
+                <input type="text" placeholder="Last Name*" name="" id="" required>
+                <input type="email" placeholder="Email*" name="" id="" required>
+                <input type="number" placeholder="Phone*" required>
+                <textarea name="" id="" cols="30" rows="10" required placeholder="Message*"></textarea>
+                <button class="formbttn">Send</button>
+            </div>
+            <div class="direction">
+                <p>1212 Address St</p>
+                <p>State,</p>
+                <p>ST, 28000</p>
+                <p style="font-size: 1.2rem; color: yellow;">Get Direction</p>
+                <p>555-555-5555</p>
+                <div class="socialMedia">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>  
+            </div>
+            <div id="map" class="map">
+    
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="script/data.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/helpers.js"></script>
+</body>
+</html>

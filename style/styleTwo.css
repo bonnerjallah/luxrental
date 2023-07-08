@@ -1,0 +1,179 @@
+.fleetDisplayContainer{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.fleetDisplayContainer h1{
+    margin-top: 50px;
+    color: red;
+    font-size: 2.0rem;
+    display: flex;
+}
+
+.headerbox{
+    display: flex;
+    height: 80px;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.rentalOptions{
+    border: 2px solid white;
+    color: red;
+    width: 25%;
+    height: 70%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 15px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.rentalOptions h3{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.optionsDisplayBox{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 20%;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-top: 50px;
+    color: white;
+    align-self: center;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.optionsDisplayBoxDisplay{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 20%;
+    font-size: 1.2rem;
+    padding: 10px;
+    color: white;
+    align-self: center;
+    background-color: rgba(10, 10, 10, 0.9);
+    border-radius: 10px;
+    animation: displayBox 1s linear  1 normal forwards;
+    visibility: visible;
+}
+@keyframes displayBox {
+    0% {
+        height: 50px;
+        opacity: 0;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+
+    50%{overflow: hidden;}
+    
+    100% {
+        opacity: 100%;
+        margin-top: 45px;
+    }
+}
+
+.optionsDisplayBox p:hover{
+    color: red;
+    border: 1px solid black;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sortOption select{
+    width: 200%;
+    height: 70%;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.rentalDisplayBox{
+    position: relative;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.rentalDisplayBox .imagebox{
+    flex-basis: 370px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgb(7, 7, 7); 
+    border-radius: 10px;
+}
+
+/**
+*! LOGO SLIDER STYLE
+**/
+
+.logoSlide {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 70px;
+    position: relative;
+    gap: 10px;
+}
+
+.logoSlide::before,
+.logoSlide::after {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logoSlide::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), black);
+}
+
+.logoSlide::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), black);
+}
+
+.imgaeSlider{
+    white-space: nowrap;
+    animation: slider 20s linear  infinite  ;
+}
+
+@keyframes slider {
+    0% { transform: translateX(calc(0)); }
+    100% { transform: translateX(calc(-150px * 7)); }
+}
+
+.logoSlide img {
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+

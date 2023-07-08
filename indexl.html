@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Rental</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav>
+        <div >
+            <a href="indexl.html"><img class="logo" src="images/Hanover.png" alt="" width="100"></a>
+        </div>
+        <div class="navBox">
+            <div class="locationContact">
+                <a href=""><p><i class="fa-solid fa-location-dot"></i>  1212 Address St State, ST 28000</p></a>
+                <a href=""><p><i class="fa-solid fa-mobile-screen"></i>  555-555-5555</p></a>
+                <a href=""><p><i class="fa-regular fa-square-plus"><span id="totalAmount" class="addAmount"></span></i>  My Collection</p></a> 
+                <button id="bookNowBttn" class="bookNowBttn"><a href="">BOOK NOW</a></button>
+                <div id="bookForm" class="bookForm">
+                    <i onclick="closebookForm()" class="fa-solid fa-x"></i>                    
+                    <input type="text" name="" id="FirstName" placeholder="First Name*" required>
+                    <input type="text" name="" id="LastName" placeholder="Last Name*" required>
+                    <input type="email" name="" id="email" placeholder="Email*" required>
+                    <input type="number" name="" id="phnNum" placeholder="Phone Number*" required>
+                    <textarea name="message" id="message" cols="30" rows="10">Message</textarea>
+                    <button style="width: 200px; height: 40px; color: white; background-color: red; border: none; border-radius: 10px;">SEND</button>
+                </div>   
+            </div>
+            <div class="links">
+                <ul class="navLinks">
+                    <li><a href="fleet.html">RENTAL FLEET</a></li>
+                    <li><a href="">VIP BLACK CHAUFFER</a></li>
+                    <li><a href="">THE EXPERIENCE</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">FREQUENTLY ASKED QUESTION</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>        
+    </nav>
+
+    <section class="landingSection">
+        <div class="landing">
+            <div class="landingSlideIn">
+                <a href="">
+                    <h1 class="rentWithUs">RENT WITH US</h1>
+                    <h3 class="discover">There are a lot of advantages of renting with Hanover. 
+                    <br>Discover them today!</h3>
+                    <h2 class="start">Start Your Search</h2>
+                </a>
+            </div>
+        </div>
+    </section>
+    `
+    <section class="vipCollection">
+        <div class="vipcontainer">
+            <div class="vip">
+                <div>
+                    <a href=""><button id="vipbttnUp" class="vipBttn vipbttn">VIEW OUR COLLECTION</button></a>
+                </div>
+                <div id="businessOrPleasure" class="businessOrPleasure">
+                    <h1>BUSINESS  <br>OR <br> PLEASURE</h1>
+                    <p>Rent the experance</p>
+                    <h2>OWN THE THRILL</h2>
+                </div>
+            </div>     
+            <div class="vipTwo">
+                <div id="blankBox" class="blankBox">
+                    <i id="tie" class="fa-brands fa-black-tie"></i>
+                </div>
+                <div id="chauffeur" class="chauffeur">
+                    <a href="">
+                        <h1>VIP BLACK. 
+                        <br>    
+                        CHAUFFEUR SERVICES</h1>
+                        <p>Discover a personalized and high-quality transportation experience with VIP Exotics Chauffeur rental vehicles.</p> 
+                        <h3>START YOUR EXPERIENCE</h3> 
+                    </a>  
+                </div>               
+            </div>
+        </div>
+        <div class="formcontainer">
+            <form action="">
+                <label for="location">Location:</label>
+                <input type="text" placeholder="city:">
+                <label for="pickupDate">Pick Up Date:</label>
+                <input type="date">
+                <label for="forRetrunDate">Return:</label>
+                <input type="date">
+                <button class="formbttn">Submit</button>   
+            </form>
+        </div>
+    </section>
+
+    <section class="gallerySection">
+        <a href="fleet.html"><h1 style="color: red; font-size: 2rem; margin-left: 29px; margin-top: 10px; margin-bottom: 10px;">RENTAL FLEET</h1></a>
+        <i id="scrollLeft" class="fa-solid fa-angles-left"></i>
+        <i id="scrollRight" class="fa-solid fa-angles-right"></i>
+        <div id="fleetGallery" class="fleetGallery">
+           
+        </div>
+    </section>
+
+    <section class="teamSection" >  
+        <h1 style="color: red; font-size: 2rem; margin: 20px;">MEET THE TEAM</h1>
+        <div class="team">
+            <div class="revCard">
+                <div class="revImg"><img src="images/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="" width="200" style="border-radius: 50%;"></div>
+                <div class="revCommt">
+                    <p style="font-weight: bold;">Sam Doe</p>
+                    <p style="font-size: 1rem; color: white;">Owner</p>
+                    <p style="font-size: 1rem;">555-555-5555</p>
+                    <a href=""><p style="font-size: 1rem;"><i class="fa-solid fa-envelope-open-text"></i> Email</p></a>
+                </div>
+            </div>
+            <div class="revCard">
+                <div class="revImg"><img src="images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg" alt="" width="200" style="border-radius: 50%;"></div>
+                <div class="revCommt">
+                    <p style="font-weight: bold;">Sam Doe</p>
+                    <p style="font-size: 1rem; color: white;">General Manager</p>
+                    <p style="font-size: 1rem;">555-555-5555</p>
+                    <a href=""><p style="font-size: 1rem;"><i class="fa-solid fa-envelope-open-text"></i> Email</p></a>
+                </div> 
+            </div>
+            <div class="revCard">
+                <div class="revImg"><img src="images/kaziminmizan-mizan-61Idm7r4ERE-unsplash.jpg" alt="" width="200" style="border-radius: 50%;"></div>
+                <div class="revCommt">
+                    <p style="font-weight: bold;">Sam Doe</p>
+                    <p style="font-size: 1rem; color: white;">Sales Manager</p>
+                    <p style="font-size: 1rem;">555-555-5555</p>
+                    <a href=""><p style="font-size: 1rem;"><i class="fa-solid fa-envelope-open-text"></i> Email</p></a>
+                </div>
+            </div>
+            <div class="revCard">
+                <div class="revImg"><img src="images/fortune-vieyra-aAN9ocBHbyo-unsplash.jpg" alt="" width="200" style="border-radius: 50%;"></div>
+                <div class="revCommt">
+                    <p style="font-weight: bold;">Sam Doe</p>
+                    <p style="font-size: 1rem; color: white;">Manager</p>
+                    <p style="font-size: 1rem;">555-555-5555</p>
+                    <a href=""><p style="font-size: 1rem;"><i class="fa-solid fa-envelope-open-text"></i> Email</p></a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="connect">
+        <h2 style="color: red; font-size: 2rem; margin: 20px;">GET IN TOUCH WITH US</h2>
+        <div class="connectFormContainer">
+            <div class="connectForm">
+                <input type="text" placeholder="First Name*" name="" id="" required>
+                <input type="text" placeholder="Last Name*" name="" id="" required>
+                <input type="email" placeholder="Email*" name="" id="" required>
+                <input type="number" placeholder="Phone*" required>
+                <textarea name="" id="" cols="30" rows="10" required placeholder="Message*"></textarea>
+                <button class="formbttn">Send</button>
+            </div>
+            <div class="direction">
+                <p>1212 Address St</p>
+                <p>State,</p>
+                <p>ST, 28000</p>
+                <p style="font-size: 1.2rem; color: yellow;">Get Direction</p>
+                <p>555-555-5555</p>
+                <div class="socialMedia">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>  
+            </div>
+            <div id="map" class="map">
+    
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTFD6cotc2_uhwOVx_ccLCUHuHzwDy_WA&callback=initMap"
+    async defer></script> -->
+    <script src="script/data.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>
