@@ -111,6 +111,7 @@ if(scrollRight) {
     });
 }
 
+
 function ScrollLeft() {
     let fleetGallery = document.getElementById("fleetGallery");
     fleetGallery.scrollTo({
