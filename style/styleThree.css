@@ -1,0 +1,91 @@
+.aboutUsSection{
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.about{
+    height: 50%;
+}
+.about h1{
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.about h2{
+    margin-top: 20px; 
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.about h3{
+    margin: 20px;
+    line-height: 10px;
+    font-size: 1.3rem;
+}
+
+.about p{
+    line-height: 40px;
+    font-size: 1.2rem;
+}
+
+.threeSteps{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50%;
+    column-gap: 20px;
+    width: 90%;
+    margin: auto;
+
+}
+
+.chooseACar,
+.reserveACar,
+.hitTheRd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:20px ;
+    text-align: center;
+}
+
+.fa-car-rear,
+.fa-calendar,
+.fa-road{
+    font-size: 7rem;
+    color: rgb(255, 253, 253);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 3px solid red;
+    width: 45%;
+    height: 150px;
+    display: flex;
+    background-color: rgba(236, 107, 107, 0.1);
+    padding: 20px;
+}
+
+.chooseACar p,
+.reserveACar p,
+.hitTheRd p{
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+
+.chooseACar h2,
+.reserveACar h2,
+.hitTheRd h2{
+    font-size: 1.7rem;
+}
+
+.blackDivImage{
+    background-image: url(../images/why-kei-8e2gal_GIE8-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    opacity: 30%;
+}
+

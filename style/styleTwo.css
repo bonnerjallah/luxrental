@@ -168,6 +168,203 @@
     width: 200px;
 }
 
+/**
+*! VIP EXPERIENCE PAGE STYLE
+**/
+.topbackGroundImage{
+    background-image: url(../images/justus-menke-CjLpfGGdfiY-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(90%);
+    opacity: 35%;
+    border: 2px solid green;
+    height: 100vh;
+}
+
+.theExperienceContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: -450px;
+    padding: 20px;
+}
+.theExperienceContainer h1{
+    color: red;
+    margin-bottom: 150px;
+}
+.roadSide-ExpressWrapper{
+    display: flex;
+    height: 400px;
+    column-gap: 20px;
+}
+
+.vipMemProg h2,
+.vipChuffSvc h2,
+.expressReservation h2,
+.roadSide h2, 
+.express h2{
+    color: rgb(7, 0, 0);
+    background-color: rgba(248, 243, 243, 0.5);
+    border-radius: 10px;
+    font-size: 2rem;
+    color: red;
+    padding: 10px;
+    
+}
+
+.roadSide p, 
+.express p,
+.vipChuffSvc p,
+.expressReservation p,
+.vipMemProg p{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    line-height: 25px;
+    color: rgb(6, 0, 0);
+    background-color: rgba(247, 247, 247, 0.9);
+    opacity: 80%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.roadSide{
+    background-image: url(../images/roadside\ tire\ change.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+
+.roadSide::before,
+.roadSide::after,
+.express::before,
+.express::after,
+.vipChuffSvc::before,
+.vipChuffSvc::after,
+.expressReservation::before,
+.expressReservation::after,
+.vipMemProg::before,
+.vipMemProg::after{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.roadSide::before, 
+.express::before,
+.vipChuffSvc::before,
+.expressReservation::before,
+.vipMemProg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(228, 8, 8, 0.7);
+    transition: opacity 0.3s;
+}
+  
+.roadSide:hover::before,
+.express:hover::before,
+.vipChuffSvc:hover::before,
+.expressReservation:hover::before,
+.vipMemProg:hover::before{
+    opacity: 0;
+    color: black;
+}
+
+.fa-clock, 
+.fa-car,
+.fa-bell,
+.fa-gem{
+    font-size: 3rem;
+    margin: 20px;
+    color: red;
+}
+
+.express{
+    background-image: url(../images/jakob-rosen-M8zjUiClRvw-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+
+.fa-rocket{
+    font-size: 3rem;
+    margin: 20px;
+    color: red; 
+}
+
+.chuffExpreMemb{
+    display: flex;
+    height: 400px;
+    column-gap: 20px; 
+    margin-top: 30px;
+}
+.vipChuffSvc{
+    background-image: url(../images/why-kei-8e2gal_GIE8-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    filter: grayscale(50%);
+    cursor: pointer; 
+}
+.expressReservation{
+    background-image: url(../images/andrey-zvyagintsev-cj8RKNAN1jY-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+.vipMemProg{
+    background-image: url(../images/kristin-wilson-alEMgpX6oo8-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+.regbutton{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: red;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
 
 
 

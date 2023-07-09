@@ -4,14 +4,17 @@
 const rentalOptions = document.getElementById("rentalOptions");
 const optionsDisplayBox = document.getElementById("optionsDisplayBox");
 
-rentalOptions.addEventListener("click", () => {
+if (rentalOptions) {
+  rentalOptions.addEventListener("click", () => {
     optionsDisplayBox.classList.toggle("optionsDisplayBoxDisplay");
-});
+  });
+}
 
 
 //CAR SELECTION FUNC
-optionsDisplayBox.addEventListener('click', function(event) {
-  event.preventDefault();
+if (optionsDisplayBox) {
+  optionsDisplayBox.addEventListener('click', function(event) {
+    event.preventDefault();
 
   if (event.target.classList.contains('fleetSelections')) {
     const selection = event.target.innerHTML.toLowerCase();
@@ -73,15 +76,19 @@ optionsDisplayBox.addEventListener('click', function(event) {
           </div>
         `;
         
+        
         fleetGallery.innerHTML += html;
+      
       }
     });
   }
 });
+}
  
 
 //SORT SELECTION FUNC
 const sortBy = document.getElementById("sortBy");
+if(sortBy) {
 sortBy.addEventListener("change", (e) => {
   const sortOrder = e.target.value === "makea-z" ? 1 : -1;
   const sortedData = carData.sort((a, b) => sortOrder * a.name.localeCompare(b.name));
@@ -142,6 +149,7 @@ sortBy.addEventListener("change", (e) => {
     fleetGallery.innerHTML += html;
   });
 });
+}
 
   
   
