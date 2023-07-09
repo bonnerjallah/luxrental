@@ -248,8 +248,8 @@ nav{
 
 .fleetGallery{
     position: relative;
-    width: 90%;
-    height: 541px;
+    width: 93%;
+    height: 535px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -272,21 +272,24 @@ nav{
     position: absolute;
     font-size: 2.5rem;
     top: 240px;
-    margin-left: 20px;
+    margin-left: 10px;
     color: rgb(254, 253, 253);
     cursor: pointer;
     border-radius: 50%;
-    padding: 5px;   
+    padding: 5px;  
+    z-index: 1;
+ 
 }
 .fa-angles-right{
     position: absolute;
     font-size: 2.5rem;
     top: 240px;
-    margin-left: 1205px;
+    margin-left: 1210px;
     color: rgb(254, 253, 253);
     cursor: pointer;
     border-radius: 50%;
     padding: 5px;  
+    z-index: 1;
 }
 
 /**
@@ -473,6 +476,9 @@ input[type="number"]::-webkit-inner-spin-button,
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.5rem;
+}
+.reservebttn:hover{
+    color: black;
 }
 
 /**

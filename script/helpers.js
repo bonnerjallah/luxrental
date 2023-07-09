@@ -71,7 +71,7 @@ if (optionsDisplayBox) {
                   <button>SEND</button>
                 </form>
               </div>
-              <button class="reservebttn">RESERVE NOW</button>
+              <a href="bigGallery"><button class="reservebttn">RESERVE NOW</button></a>
             </div>
           </div></a>
         `;
@@ -85,7 +85,6 @@ if (optionsDisplayBox) {
 });
 }
  
-
 //SORT SELECTION FUNC
 const sortBy = document.getElementById("sortBy");
 if(sortBy) {
@@ -141,9 +140,10 @@ sortBy.addEventListener("change", (e) => {
               <button>SEND</button>
             </form>
           </div>
-          <button class="reservebttn">RESERVE NOW</button>
+            <a href="bigGallery"><button class="reservebttn">RESERVE NOW</button></a>
+          </div>
         </div>
-      </div></a>
+      </a>
     `;
 
     fleetGallery.innerHTML += html;
@@ -169,6 +169,11 @@ const showAnswer = (divId,) => {
   }
 }
   
+
+/**
+ *! BIG GALLERY FUNC
+ **/
+
   
   
   

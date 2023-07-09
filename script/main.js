@@ -115,7 +115,7 @@ if(scrollRight) {
 function ScrollLeft() {
     let fleetGallery = document.getElementById("fleetGallery");
     fleetGallery.scrollTo({
-        left: fleetGallery.scrollLeft - 380,
+        left: fleetGallery.scrollLeft - 390,
         behavior: "smooth"
     });
 }
@@ -123,7 +123,7 @@ function ScrollLeft() {
 function ScrollRight() {
     let fleetGallery = document.getElementById("fleetGallery");
     fleetGallery.scrollTo({
-        left: fleetGallery.scrollLeft + 380,
+        left: fleetGallery.scrollLeft + 390,
         behavior: "smooth"
     });
 }
@@ -179,7 +179,7 @@ let GenerateCarDataPic = () => {
                             <button>SEND</button>
                         </form>
                         </div>
-                            <button class="reservebttn">RESERVE NOW</button>
+                            <a href="bigGallery"><button class="reservebttn">RESERVE NOW</button></a>
                         </div>
                     </div>
                 </div>               

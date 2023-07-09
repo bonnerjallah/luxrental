@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/styleTwo.css">
+    <link rel="stylesheet" href="style/styleThree.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div >
+            <a href="indexl.html"><img class="logo" src="images/Hanover.png" alt="" width="100"></a>
+        </div>
+        <div class="navBox">
+            <div class="locationContact">
+                <a href="#address"><p><i class="fa-solid fa-location-dot"></i>  1212 Address St State, ST 28000</p></a>
+                <a href=""><p><i class="fa-solid fa-mobile-screen"></i>  555-555-5555</p></a>
+                <a href=""><p><i class="fa-regular fa-square-plus"><span id="totalAmount" class="addAmount"></span></i>  My Collection</p></a> 
+                <button id="bookNowBttn" class="bookNowBttn"><a href="">BOOK NOW</a></button>
+                <div id="bookForm" class="bookForm">
+                    <i onclick="closebookForm()" class="fa-solid fa-x"></i>                    
+                    <input type="text" name="" id="FirstName" placeholder="First Name*" required>
+                    <input type="text" name="" id="LastName" placeholder="Last Name*" required>
+                    <input type="email" name="" id="email" placeholder="Email*" required>
+                    <input type="number" name="" id="phnNum" placeholder="Phone Number*" required>
+                    <textarea name="message" id="message" cols="30" rows="10">Message</textarea>
+                    <button style="width: 200px; height: 40px; color: white; background-color: red; border: none; border-radius: 10px;">SEND</button>
+                </div>   
+            </div>
+            <div class="links">
+                <ul class="navLinks">
+                    <li><a href="fleet.html">RENTAL FLEET</a></li>
+                    <li><a href="theExperience.html">THE EXPERIENCE</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="frequentlyAskQuestions.html">FREQUENTLY ASKED QUESTION</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>        
+    </nav>
+
+   <section class="galleryWrapper">
+        <i class="fa-solid fa-arrow-rotate-left"> Back to showroom</i>
+        <div class="namebox">
+            <div>
+                <p id="bigGalleryYear">2021</p>
+                <h2 id="bigGalleryName" style="font-size: 3rem;">Lambo</h2>
+            </div>
+            <div id="startAt">
+                <p>Rental start at:</p>
+                <p id="bigGalleryAmount" style="color: red; font-size: 2.5rem;">$ 1,283</p>
+                <p>Per day</p>
+            </div>
+        </div>
+
+        <div class="bigPics">
+            <img src="images/2021-Lamborghini-Urus-1679.webp" alt="">
+            <i class="fa-regular fa-circle-right"></i>           
+            <i class="fa-regular fa-circle-left"></i>           
+            <div class="bigGalleryCardLike">
+                <div class="cardLike bigGallerylikebuttons">
+                    <button id="save-${id}" onclick="addToCollection(${id})"><i class="fa-regular fa-heart"></i> Save</button>
+                    <button onclick="textToPhone(${id})"><i class="fa-regular fa-file-lines"> Text To Phone</i></button>
+                    <form id="textMsg-${id}" class="textmsg" action="">
+                        <input type="number" placeholder="1+(---) --- ----" inputmode="numeric required">
+                        <button style="background-color: red;"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <button onclick="share(${id})"><i class="fa-solid fa-at"> Share</i></button>
+                    <form id="share-${id}" class="share" action="">
+                        <input type="emal" id="fromEmail" placeholder="Email From*" required>
+                        <input type="emal" id="sendToEmail" placeholder="Email To*" required>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <div class="attachImg">
+                            <input type="checkbox" id="attach"> 
+                            <label for="attach">ATTACH VEHICLE IMAGES</label>
+                        </div>
+                        <button>SEND</button>
+                    </form>
+                    </div>
+                        <a href="bigGallery"><button class="reservebttn">RESERVE NOW</button></a>
+                    </div>
+                </div>
+            </div>     
+        </div>
+
+        <div class="reserveVehicle">
+            <p>Bookyour</p>
+            <h3>VEHICLE</h3>
+            <form id="reservationForm" class="reservationForm" action="">
+                <fieldset class="yourInfo">
+                    <h4>YOUR INFORMATION</h4>
+                    <input type="text" id="reservFirstName" class="reservName" placeholder="First Name*">
+                    <input type="text" id="reservlastName" class="reservLastName" placeholder="Last Name*">
+                    <input type="text" id="reservAddress" class="reservAddress" placeholder="Address*">
+                    <input type="text" id="reservPhone" class="reservPhone" placeholder="Phone*">
+                    <input type="email" id="reservEmail" class="reservEmail" placeholder="Emale*">
+                    <input type="text" id="reservCity" class="reservCity" placeholder="City*">
+                    <input type="text" id="reservState" class="reservState" placeholder="State*" style="width: 67px;">
+                </fieldset>                
+                <fieldset class="reservRequest">
+                    <h4>RESERVATION REQUEST</h4>
+                    <input type="date" id="reserPickUpDate" class="reserPickUpDate" placeholder="Pick Up Date*">
+                    <input type="date" id="reserDropOffDate" class="reserDropOffDate" placeholder="Drop Off Date*">
+                    <input type="text" id="vehicleOfIntrest" class="vehicleOfIntrest" placeholder="Vehicle Of Intrest">
+                    <div class="time">
+                        <label for="pickUpTime">Pick Up Time</label>
+                        <input type="time" id="pickUpTime" name="pickUpTime" class="pickUpTime" placeholder="Pick Up Time" style="width: 7rem;">
+                        <label for="DropOffTime">Drop Off Time</label>
+                        <input type="time" id="dropOffTime" name="pickUpTime" class="dropOffTime" placeholder="Drop Off Time" style="width: 7rem;">
+                    </div>
+                    <br>
+                    <div class="checkboxLabel">
+                        <input type="checkbox" name="chaufferService" id="chaufferService" style="width: 1rem;">
+                        <label for="chaufferService">YES, I NEED CHAUFFER FOR MY TRIP</label>
+                    </div>   
+                </fieldset>
+                <fieldset class="reservMessage">
+                    <h4>ADDITIONAL INFORMATION</h4>
+                    <textarea name="reseravationMessage" id="reseravationMessage" cols="30" rows="10">Message</textarea>
+                </fieldset>
+                <button style="width: 7rem; margin-top: 10px; height: 2rem; border-radius: 5px; cursor: pointer; color: red;">Submit</button>
+            </form>
+        </div>
+
+        <div class="specification">
+            <div class="abt">
+                <p>Vehicle</p>
+                <h3>SPECIFICATIONS</h3>
+                <p>Engine: <span class="engi">${engine}</span><p>
+                <p>Transmission: <span class="trans">${transmission}</span></p>
+                <p>Interior: <span class="inte">${interior}</span></p>
+                <p>Exterior: <span class="exte">${exterior}</span></p>
+            </div>
+            <div class="aboutVehicle">
+                <p>About</p>
+                <h3>THIS VEHICLE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptate cumque quod doloribus hic, veritatis velit blanditiis numquam nesciunt adipisci magni atque id autem praesentium ex amet obcaecati maxime facere.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="allImages">
+        <div class="viewAllPhoto">
+            
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTFD6cotc2_uhwOVx_ccLCUHuHzwDy_WA&callback=initMap"
+    async defer></script>
+    <script src="script/data.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>
