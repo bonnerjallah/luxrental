@@ -27,7 +27,7 @@ if (optionsDisplayBox) {
 
       if (match) {
         const html = `
-          <div id="product-id-${id}" class="imagebox cardItem">
+        <a href="bigGallery"><div id="product-id-${id}" class="imagebox cardItem">
             <img src="${img[0]}" alt="">
             <div class="discriptionbox">
               <div class="discrip">
@@ -73,7 +73,7 @@ if (optionsDisplayBox) {
               </div>
               <button class="reservebttn">RESERVE NOW</button>
             </div>
-          </div>
+          </div></a>
         `;
         
         
@@ -97,7 +97,7 @@ sortBy.addEventListener("change", (e) => {
   sortedData.forEach((elem) => {
     const { id, year, name, price, engine, transmission, interior, exterior, img } = elem;
     const html = `
-      <div id="product-id-${id}" class="imagebox cardItem">
+    <a href="bigGallery"><div id="product-id-${id}" class="imagebox cardItem">
         <img src="${img[0]}" alt="">
         <div class="discriptionbox">
           <div class="discrip">
@@ -143,7 +143,7 @@ sortBy.addEventListener("change", (e) => {
           </div>
           <button class="reservebttn">RESERVE NOW</button>
         </div>
-      </div>
+      </div></a>
     `;
 
     fleetGallery.innerHTML += html;
@@ -151,7 +151,23 @@ sortBy.addEventListener("change", (e) => {
 });
 }
 
-  
+/**
+*! FREQUENTLY ASK QUESTION FUNC
+**/
+
+const ansBox = document.querySelectorAll(".ansBox")
+
+const showAnswer = (divId,) => {
+  const answer = document.querySelectorAll(".ans")
+
+  for(let i = 0; i < answer.length; i++) {
+    let rightAnswer = answer[i]
+      
+    if(rightAnswer.id === divId) {
+      ansBox[i].classList.toggle("ansBoxDisplay")
+    }
+  }
+}
   
   
   

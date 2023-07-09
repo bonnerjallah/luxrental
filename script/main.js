@@ -137,7 +137,7 @@ let GenerateCarDataPic = () => {
     let carDataCard = carData.map((elem) => {
         let {id, img, year, name, price, exterior, interior, transmission, engine } = elem;
         return `
-            <div id="product-id-${id}" class="imagebox cardItem">
+        <a href="bigGallery"><div id="product-id-${id}" class="imagebox cardItem">
                 <img src=${img[0]} alt="">
                 <div class="discriptionbox">
                     <div class="discrip"><a href="">
@@ -183,7 +183,7 @@ let GenerateCarDataPic = () => {
                         </div>
                     </div>
                 </div>               
-            </div>
+            </div></a>
         `;
     })
     .join("");
@@ -262,24 +262,29 @@ let share = (id) => {
  * ! MAP GEO LOCATION API
  */
 
-// function initMap () {
-//     let option = {
-//         zoom: 11,
-//         center: {lat: 35.1340053, lng: -81.0202533}
-//     }
+function initMap () {
+    let option = {
+        zoom: 11,
+        center: {lat: 35.1340053, lng: -81.0202533}
+    }
 
-//     const map = new google.maps.Map(document.getElementById("map"), option)
+    if(map){
+        const map = new google.maps.Map(document.getElementById("map"), option)
 
-//     let marker = new google.maps.Marker({
-//         position: {lat: 35.220592, lng:-80.85156},
-//         map:map
-//     })
 
-//     let infoWindow = new google.maps.InfoWindow({
-//         content: '<h1>1212 Address St</h1>'
-//     })
+        let marker = new google.maps.Marker({
+            position: {lat: 35.220592, lng:-80.85156},
+            map:map
+        })
+    
+        let infoWindow = new google.maps.InfoWindow({
+            content: '<h1>1212 Address St</h1>'
+        })
+    
+        marker.addListener("click", function(){
+            infoWindow.open(map, marker)
+        })
+    }
 
-//     marker.addListener("click", function(){
-//         infoWindow.open(map, marker)
-//     })
-// }
+   
+}

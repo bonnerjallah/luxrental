@@ -89,3 +89,120 @@
     opacity: 30%;
 }
 
+/**
+*! FREQUENTLY ASK QUESTION STYLE
+**/
+.questionswrapper{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.questionswrapper h1{
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 2rem;
+}
+
+.quesAndAns{
+    margin: auto;
+    height: auto;
+    width: 80%;
+    position: relative;
+    border: 2px solid white;
+}
+.quesAndAns i{
+    margin: 0 15px 0 5px;
+    color: red;
+}
+.quesBox{
+    border: 2px solid rgb(240, 240, 242);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.ansBox{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.ansBoxDisplay{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    margin: 10px;
+    height: 50px;
+    visibility: visible;
+    animation: ansdisplay 800ms linear  1 normal forwards;
+}
+@keyframes ansdisplay {
+    0%{margin-top: -10px;
+    z-index: -3;}
+    100%{margin: 10px}
+}
+
+.imagebreak{
+    background-image: url(../images/brayden-law-iBLOPHwOHJE-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    opacity: 50%;
+}
+
+/**
+*! CONTACT US STYLE
+**/
+
+.contactFormsection{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactFormsection h1{
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 2rem;
+}
+
+.contactUs{
+    display: inline-block;
+    padding: 10px;
+    width: 80%;
+   
+}
+
+.contactUs input{
+    width: 46%;
+    height: 90px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.contactUs textarea{
+    margin-left: 20px;
+    width: 96%;
+    padding: 10px;
+
+}
+
+
+
+
+
+
+
+

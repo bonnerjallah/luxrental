@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Frequently Asked Questions</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style/styleTwo.css">
     <link rel="stylesheet" href="style/styleThree.css">
@@ -42,34 +42,62 @@
         </div>        
     </nav>
 
-    <section class="aboutUsSection">
-        <div class="about">
-            <h1>About Us</h1>
-            <h2>Renting your car is simple. And definitely fast</h2>
-            <h3>We provide an exceptional experience</h3>
-            <p>Discover the Hanover advantage. Enjoy convenient and loyal conditions for a remarkable driving experience. Browse our legendary selection of vehicles for any occasion. Rent in 3 simple steps and hit the road swiftly.</p>
-        </div>
-        <div class="threeSteps">
-            <div class="chooseACar">
-                <i class="fa-solid fa-car-rear"></i>
-                <h2>Choose a car</h2>
-                <p>Browse our selection of exotic sports cars, luxury sedans and SUV.</p>
+    <section class="questionswrapper">
+        <h1>Frequently Asked Questions</h1>
+        <div class="quesAndAns">
+            <div onclick="showAnswer('div1')" id="quesOne" class="quesOne quesBox">
+                <i class="fa-solid fa-plus-minus"></i>
+                <p>Can I cancel my reservation?</p>
             </div>
-            <div class="reserveACar">
-                <i class="fa-regular fa-calendar"></i>
-                <h2>Reserve it with our team</h2>
-                <p>Connect with our team to complete the reservation for your vehicle.</p>
+            <div id="div1" class="ans ansBox">
+                <p>Cancelations must be made at least 48 hours of your reservation to receive a full refund.</p>
             </div>
-            <div class="hitTheRd">
-                <i class="fa-solid fa-road"></i>
-                <h2>Hit the road</h2>
-                <p>See you on the asphalt</p>
-            </div>
-        </div>
-    </section> 
 
-    <div class="blackDivImage">
-    </div>
+            <div onclick="showAnswer('div2')" id="quesTwo" class="quesTwo quesBox">
+                <i class="fa-solid fa-plus-minus"></i>
+                <p>Do I need insurance to rent a vehicle from Hanover?</p>
+            </div>
+            <div id="div2" class="ans ansBox">
+                <p>The renter must provide proof of an active full coverage insurance policy. The policy must provide collision, comprehensive, and liability coverage that transfers to your rental.</p>
+            </div>
+
+            <div onclick="showAnswer('div3')" id="quesTwo" class="quesTwo quesBox">
+                <i class="fa-solid fa-plus-minus"></i>
+                <p>Does Hanover require a Security Deposit?</p>
+            </div>
+            <div id="div3" class="ans ansBox">
+                <p>Yes, we require a security deposit. The current deposit amount is $1000. Upon return of your rental, we will provide an on site evaluation to check for damages, fuel level and cleanliness. Refund deposits are refundable less any additional charges. Please allow 5-7 business days to receive your refund.</p>
+            </div>
+
+            <div onclick="showAnswer('div4')" id="quesTwo" class="quesTwo quesBox">
+                <i class="fa-solid fa-plus-minus"></i>
+                <p>Can I add an additional driver?</p>
+            </div>
+            <div id="div4" class="ans ansBox">
+                <p>Yes, you can add up to two drivers to your rental agreement. Additional drivers must be present at time of pick up of vehicle and provide their drivers license and proof of insurance in addition to the renter.</p>
+            </div>
+
+            <div onclick="showAnswer('div5')" id="quesTwo" class="quesTwo quesBox">
+                <i class="fa-solid fa-plus-minus"></i>
+                <p>How many miles comes with the rental of a vehicle?</p>
+            </div>
+            <div id="div5" class="ans ansBox">
+                <p>Each reservation comes with 100 miles per day. Anything over has an additional cost which varies by the vehicle. Reach out to us for specific per miles pricing.</p>
+            </div>
+
+            <div onclick="showAnswer('div6')" id="quesTwo" class="quesTwo quesBox">
+                <i class="fa-solid fa-plus-minus"></i>
+                <p>Does Hanover offer hourly rentals?</p>
+            </div>
+            <div id="div6" class="ans ansBox">
+                <p>Yes, with a 4 hour minimum. Pricing varies from vehicle to vehicle.</p>
+            </div>
+        </div> 
+    </section>
+
+    <section class="imagebreak">
+
+    </section>
 
     <section id="address" class="connect">
         <h2 style="color: red; font-size: 2rem; margin: 20px;">GET IN TOUCH WITH US</h2>
