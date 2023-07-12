@@ -42,120 +42,146 @@
         </div>        
     </nav>
 
-   <section class="galleryWrapper">
-        <i class="fa-solid fa-arrow-rotate-left"> Back to showroom</i>
-        <div class="namebox">
-            <div>
-                <p id="bigGalleryYear">2021</p>
-                <h2 id="bigGalleryName" style="font-size: 3rem;">Lambo</h2>
-            </div>
-            <div id="startAt">
-                <p>Rental start at:</p>
-                <p id="bigGalleryAmount" style="color: red; font-size: 2.5rem;">$ 1,283</p>
-                <p>Per day</p>
-            </div>
-        </div>
-
-        <div class="bigPics">
-            <img src="images/2021-Lamborghini-Urus-1679.webp" alt="">
-            <i class="fa-regular fa-circle-right"></i>           
-            <i class="fa-regular fa-circle-left"></i>           
-            <div class="bigGalleryCardLike">
-                <div class="cardLike bigGallerylikebuttons">
-                    <button id="save-${id}" onclick="addToCollection(${id})"><i class="fa-regular fa-heart"></i> Save</button>
-                    <button onclick="textToPhone(${id})"><i class="fa-regular fa-file-lines"> Text To Phone</i></button>
-                    <form id="textMsg-${id}" class="textmsg" action="">
-                        <input type="number" placeholder="1+(---) --- ----" inputmode="numeric required">
-                        <button style="background-color: red;"><i class="fa-solid fa-arrow-right"></i></button>
-                    </form>
-                    <button onclick="share(${id})"><i class="fa-solid fa-at"> Share</i></button>
-                    <form id="share-${id}" class="share" action="">
-                        <input type="emal" id="fromEmail" placeholder="Email From*" required>
-                        <input type="emal" id="sendToEmail" placeholder="Email To*" required>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <div class="attachImg">
-                            <input type="checkbox" id="attach"> 
-                            <label for="attach">ATTACH VEHICLE IMAGES</label>
-                        </div>
-                        <button>SEND</button>
-                    </form>
-                    </div>
-                        <a href="bigGallery"><button class="reservebttn">RESERVE NOW</button></a>
-                    </div>
+   <section id="galleryWrapper" class="bigGalleryWrapper">
+            <!-- <a href="fleet.html"><i class="fa-solid fa-arrow-rotate-left"> Back to showroom</i></a>
+            <div class="namebox">
+                <div>
+                    <p id="bigGalleryYear">2021</p>
+                    <h2 id="bigGalleryName" style="font-size: 3rem;">Lambo</h2>
                 </div>
-            </div>     
-        </div>
+                <div id="startAt">
+                    <p>Rental start at:</p>
+                    <p id="bigGalleryAmount" style="color: red; font-size: 2.5rem;">$ 1,283</p>
+                    <p>Per day</p>
+                </div>
+            </div>
 
-        <div class="reserveVehicle">
-            <p>Bookyour</p>
-            <h3>VEHICLE</h3>
-            <form id="reservationForm" class="reservationForm" action="">
-                <fieldset class="yourInfo">
-                    <h4>YOUR INFORMATION</h4>
-                    <input type="text" id="reservFirstName" class="reservName" placeholder="First Name*">
-                    <input type="text" id="reservlastName" class="reservLastName" placeholder="Last Name*">
-                    <input type="text" id="reservAddress" class="reservAddress" placeholder="Address*">
-                    <input type="text" id="reservPhone" class="reservPhone" placeholder="Phone*">
-                    <input type="email" id="reservEmail" class="reservEmail" placeholder="Emale*">
-                    <input type="text" id="reservCity" class="reservCity" placeholder="City*">
-                    <input type="text" id="reservState" class="reservState" placeholder="State*" style="width: 67px;">
-                </fieldset>                
-                <fieldset class="reservRequest">
-                    <h4>RESERVATION REQUEST</h4>
-                    <input type="date" id="reserPickUpDate" class="reserPickUpDate" placeholder="Pick Up Date*">
-                    <input type="date" id="reserDropOffDate" class="reserDropOffDate" placeholder="Drop Off Date*">
-                    <input type="text" id="vehicleOfIntrest" class="vehicleOfIntrest" placeholder="Vehicle Of Intrest">
-                    <div class="time">
-                        <label for="pickUpTime">Pick Up Time</label>
-                        <input type="time" id="pickUpTime" name="pickUpTime" class="pickUpTime" placeholder="Pick Up Time" style="width: 7rem;">
-                        <label for="DropOffTime">Drop Off Time</label>
-                        <input type="time" id="dropOffTime" name="pickUpTime" class="dropOffTime" placeholder="Drop Off Time" style="width: 7rem;">
+            <div class="bigPics">
+                <img src="images/2021-Lamborghini-Urus-1679.webp" alt="">
+                <i class="fa-regular fa-circle-right"></i>           
+                <i class="fa-regular fa-circle-left"></i>           
+                <div class="bigGalleryCardLike">
+                    <div class="cardLike bigGallerylikebuttons">
+                        <button id="save-${id}" onclick="addToCollection(${id})"><i class="fa-regular fa-heart"></i> Save</button>
+                        <button onclick="textToPhone(${id})"><i class="fa-regular fa-file-lines"> Text To Phone</i></button>
+                        <form id="textMsg-${id}" class="textmsg" action="">
+                            <input type="number" placeholder="1+(---) --- ----" inputmode="numeric required">
+                            <button style="background-color: red;"><i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                        <button onclick="share(${id})"><i class="fa-solid fa-at"> Share</i></button>
+                        <form id="share-${id}" class="share" action="">
+                            <input type="emal" id="fromEmail" placeholder="Email From*" required>
+                            <input type="emal" id="sendToEmail" placeholder="Email To*" required>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <div class="attachImg">
+                                <input type="checkbox" id="attach"> 
+                                <label for="attach">ATTACH VEHICLE IMAGES</label>
+                            </div>
+                            <button>SEND</button>
+                        </form>
+                        </div>
+                            <a href="bigGallery"><button class="reservebttn">RESERVE NOW</button></a>
+                        </div>
                     </div>
-                    <br>
-                    <div class="checkboxLabel">
-                        <input type="checkbox" name="chaufferService" id="chaufferService" style="width: 1rem;">
-                        <label for="chaufferService">YES, I NEED CHAUFFER FOR MY TRIP</label>
-                    </div>   
-                </fieldset>
-                <fieldset class="reservMessage">
-                    <h4>ADDITIONAL INFORMATION</h4>
-                    <textarea name="reseravationMessage" id="reseravationMessage" cols="30" rows="10">Message</textarea>
-                </fieldset>
-                <button style="width: 7rem; margin-top: 10px; height: 2rem; border-radius: 5px; cursor: pointer; color: red;">Submit</button>
-            </form>
-        </div>
-
-        <div class="specification">
-            <div class="abt">
-                <p>Vehicle</p>
-                <h3>SPECIFICATIONS</h3>
-                <p>Engine: <span class="engi">${engine}</span><p>
-                <p>Transmission: <span class="trans">${transmission}</span></p>
-                <p>Interior: <span class="inte">${interior}</span></p>
-                <p>Exterior: <span class="exte">${exterior}</span></p>
+                </div>     
             </div>
-            <div class="aboutVehicle">
-                <p>About</p>
-                <h3>THIS VEHICLE</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptate cumque quod doloribus hic, veritatis velit blanditiis numquam nesciunt adipisci magni atque id autem praesentium ex amet obcaecati maxime facere.</p>
 
+            <div class="reserveVehicle">
+                <p>Bookyour</p>
+                <h3>VEHICLE</h3>
+                <form id="reservationForm" class="reservationForm" action="">
+                    <fieldset class="yourInfo">
+                        <h4>YOUR INFORMATION</h4>
+                        <input type="text" id="reservFirstName" class="reservName" placeholder="First Name*">
+                        <input type="text" id="reservlastName" class="reservLastName" placeholder="Last Name*">
+                        <input type="text" id="reservAddress" class="reservAddress" placeholder="Address*">
+                        <input type="text" id="reservPhone" class="reservPhone" placeholder="Phone*">
+                        <input type="email" id="reservEmail" class="reservEmail" placeholder="Emale*">
+                        <input type="text" id="reservCity" class="reservCity" placeholder="City*">
+                        <input type="text" id="reservState" class="reservState" placeholder="State*" style="width: 67px;">
+                    </fieldset>                
+                    <fieldset class="reservRequest">
+                        <h4>RESERVATION REQUEST</h4>
+                        <input type="date" id="reserPickUpDate" class="reserPickUpDate" placeholder="Pick Up Date*">
+                        <input type="date" id="reserDropOffDate" class="reserDropOffDate" placeholder="Drop Off Date*">
+                        <input type="text" id="vehicleOfIntrest" class="vehicleOfIntrest" placeholder="Vehicle Of Intrest">
+                        <div class="time">
+                            <label for="pickUpTime">Pick Up Time</label>
+                            <input type="time" id="pickUpTime" name="pickUpTime" class="pickUpTime" placeholder="Pick Up Time" style="width: 7rem;">
+                            <label for="DropOffTime">Drop Off Time</label>
+                            <input type="time" id="dropOffTime" name="pickUpTime" class="dropOffTime" placeholder="Drop Off Time" style="width: 7rem;">
+                        </div>
+                        <br>
+                        <div class="checkboxLabel">
+                            <input type="checkbox" name="chaufferService" id="chaufferService" style="width: 1rem;">
+                            <label for="chaufferService">YES, I NEED CHAUFFER FOR MY TRIP</label>
+                        </div>   
+                    </fieldset>
+                    <fieldset class="reservMessage">
+                        <h4>ADDITIONAL INFORMATION</h4>
+                        <textarea name="reseravationMessage" id="reseravationMessage" cols="30" rows="10">Message</textarea>
+                    </fieldset>
+                    <button style="width: 7rem; margin-top: 10px; height: 2rem; border-radius: 5px; cursor: pointer; color: red;">Submit</button>
+                </form>
             </div>
-        </div>
+
+            <div class="specification">
+                <div class="abt">
+                    <p>Vehicle</p>
+                    <h3>SPECIFICATIONS</h3>
+                    <p>Engine: <span class="engi">${engine}</span><p>
+                    <p>Transmission: <span class="trans">${transmission}</span></p>
+                    <p>Interior: <span class="inte">${interior}</span></p>
+                    <p>Exterior: <span class="exte">${exterior}</span></p>
+                </div>
+                <div class="aboutVehicle">
+                    <p>About</p>
+                    <h3>THIS VEHICLE</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptate cumque quod doloribus hic, veritatis velit blanditiis numquam nesciunt adipisci magni atque id autem praesentium ex amet obcaecati maxime facere.</p>
+
+                </div>
+            </div>
+         -->
     </section>
 
     <section class="allImages">
-        <div class="viewAllPhoto">
-            
+        <div style="color: white;" class="viewAllPhoto">
         </div>
     </section>
 
+    <section id="address" class="connect">
+        <h2 style="color: red; font-size: 2rem; margin: 20px;">GET IN TOUCH WITH US</h2>
+        <div class="connectFormContainer">
+            <div class="connectForm">
+                <input type="text" placeholder="First Name*" name="" id="" required>
+                <input type="text" placeholder="Last Name*" name="" id="" required>
+                <input type="email" placeholder="Email*" name="" id="" required>
+                <input type="number" placeholder="Phone*" required>
+                <textarea name="" id="" cols="30" rows="10" required placeholder="Message*"></textarea>
+                <button class="formbttn">Send</button>
+            </div>
+            <div class="direction">
+                <p>1212 Address St</p>
+                <p>State,</p>
+                <p>ST, 28000</p>
+                <p style="font-size: 1.2rem; color: yellow;">Get Direction</p>
+                <p>555-555-5555</p>
+                <div class="socialMedia">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>  
+            </div>
+            <div id="map" class="map">
+    
+            </div>
+        </div>
+        
+    </section>
 
-
-
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTFD6cotc2_uhwOVx_ccLCUHuHzwDy_WA&callback=initMap"
-    async defer></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTFD6cotc2_uhwOVx_ccLCUHuHzwDy_WA&callback=initMap"
+    async defer></script> -->
     <script src="script/data.js"></script>
     <script src="script/main.js"></script>
+    <script src="script/helpers.js"></script>
 </body>
 </html>

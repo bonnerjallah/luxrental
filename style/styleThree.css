@@ -202,9 +202,14 @@
 /**
 *! BIG GALLERY STYLE
 **/
-.galleryWrapper{
+.bigGalleryWrapper{
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.bigGalleryWrapper img{
+    width: 150px;
 }
 
 .fa-arrow-rotate-left{
@@ -289,12 +294,14 @@
 
 .reserveVehicle{
     color: white;
+    position: absolute;
     width: 91%;
     margin-top: 20px;
     padding: 50px;
     margin-top: 20px;
     border-bottom: 2px solid rgb(92, 90, 90);
     margin: auto;
+    visibility: hidden;
 }
 
 .reserveVehicle h3{

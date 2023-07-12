@@ -137,10 +137,10 @@ let GenerateCarDataPic = () => {
     let carDataCard = carData.map((elem) => {
         let {id, img, year, name, price, exterior, interior, transmission, engine } = elem;
         return `
-        <a href="bigGallery"><div id="product-id-${id}" class="imagebox cardItem">
+        <a href="bigGallery.html?id=${id}"><div id="product-id-${id}" class="imagebox cardItem">
                 <img src=${img[0]} alt="">
                 <div class="discriptionbox">
-                    <div class="discrip"><a href="">
+                    <div class="discrip"><a href="bigGallery.html?id=${id}">
                         <div class="nameYear">
                             <p class="year">${year}</p>
                             <p class="name">${name}</p>
@@ -179,7 +179,7 @@ let GenerateCarDataPic = () => {
                             <button>SEND</button>
                         </form>
                         </div>
-                            <a href="bigGallery"><button class="reservebttn">RESERVE NOW</button></a>
+                            <a href="bigGallery.html?id=${id}"><button class="reservebttn">RESERVE NOW</button></a>
                         </div>
                     </div>
                 </div>               
@@ -195,9 +195,10 @@ if(fleetGallery) {
     GenerateCarDataPic();
 }
 
+
 /***
- * ! SHOPBASKET, LIKE, TEXT AND SHARE FUNCS
- */
+* ! SHOPBASKET, LIKE, TEXT AND SHARE FUNCS
+*/
 let basket = JSON.parse(localStorage.getItem("data")) || []
 
     // LIKE BUTTON FUNCS
@@ -262,29 +263,29 @@ let share = (id) => {
  * ! MAP GEO LOCATION API
  */
 
-function initMap () {
-    let option = {
-        zoom: 11,
-        center: {lat: 35.1340053, lng: -81.0202533}
-    }
+// function initMap () {
+//     let option = {
+//         zoom: 11,
+//         center: {lat: 35.1340053, lng: -81.0202533}
+//     }
 
-    if(map){
-        const map = new google.maps.Map(document.getElementById("map"), option)
+//     if(map){
+//         const map = new google.maps.Map(document.getElementById("map"), option)
 
 
-        let marker = new google.maps.Marker({
-            position: {lat: 35.220592, lng:-80.85156},
-            map:map
-        })
+//         let marker = new google.maps.Marker({
+//             position: {lat: 35.220592, lng:-80.85156},
+//             map:map
+//         })
     
-        let infoWindow = new google.maps.InfoWindow({
-            content: '<h1>1212 Address St</h1>'
-        })
+//         let infoWindow = new google.maps.InfoWindow({
+//             content: '<h1>1212 Address St</h1>'
+//         })
     
-        marker.addListener("click", function(){
-            infoWindow.open(map, marker)
-        })
-    }
+//         marker.addListener("click", function(){
+//             infoWindow.open(map, marker)
+//         })
+//     }
 
    
-}
+// }
