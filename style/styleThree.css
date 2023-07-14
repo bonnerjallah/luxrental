@@ -280,7 +280,9 @@
     padding: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 45px;
 }
+
 
 .specification h3{
     margin:  10px 0 20px 0;
@@ -304,6 +306,24 @@
     visibility: hidden;
 }
 
+.reserveVehicleDisplay{
+    color: white;
+    position: absolute;
+    width: 91%;
+    margin-top: 20px;
+    padding: 40px;
+    margin-top: 20px;
+    margin-left: 55px;
+    border-bottom: 2px solid rgb(92, 90, 90);
+    visibility: visible;
+    animation: reserveBoxDisplay 1.5s linear 1 normal forwards;
+}
+
+@keyframes reserveBoxDisplay {
+    0%{ margin-top: -100px;}
+    100%{margin-top: 220px;}
+}
+
 .reserveVehicle h3{
     margin:  10px 0 20px 0;
     color: red;
@@ -316,6 +336,9 @@
 
 .reservationForm{
     width: 100%;
+    background-color: rgba(62, 60, 60, 0.9);
+    color: black;
+
 }
 
 .reservationForm input{
@@ -340,6 +363,170 @@
     align-items: center;
     padding-left: 30px;
 }
+
+.fa-circle-xmark{
+    color: red;
+    font-size: 4rem;
+    float: right;
+    cursor: pointer;
+}
+
+/**
+*! MY COLLECTION STYLE
+**/
+
+.myCollections{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;  
+    margin: 20px; 
+}
+
+.myCollections p{
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.myCollections h1{
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.regesterSignIn button{
+    width: 10rem;
+    height: 3rem;
+    margin: 20px;
+    font-size: 1.6rem;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.regesterSignIn button:hover{
+    background-color: black;
+    color: red;
+}
+
+/**
+*! REGESTER AND SIGN IN FORM
+**/
+
+.regesAndSignInForm{
+    color: white;
+    width: 30rem;
+    margin: auto;
+    margin-top: -3rem;
+    margin-bottom: 25rem;
+}
+
+.regester{
+    border: 2px solid rgb(53, 52, 52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: .5rem;
+    margin-top: -4rem;
+    visibility: hidden;
+}
+
+.regesterdisplay{
+    border: 2px solid rgb(53, 52, 52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: .5rem;
+    margin-bottom: 30px;
+    visibility: visible;
+    animation: display 1s linear 1 normal forwards;
+}
+@keyframes display {
+    0%{opacity: 0;}
+    50%{opacity: 50%}
+    100%{opacity: 100%;}   
+}
+
+.regester p{
+    line-height: 1.2rem;
+    font-size: .9rem;
+}
+
+.regesHeader{
+    border: 1px solid rgb(53, 52, 52);
+    background-color: black;
+    color: gray;
+    margin-top: -2.5rem;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+}
+
+.makeTheMost{
+    margin-bottom: 2rem;
+}
+
+.regester input, .signIn input{
+    width: 90%;
+    height: 3rem;
+    padding: .5rem;
+}
+
+.regesterBttn, .loginbttn{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.regesterBttn:hover, .loginbttn:hover{
+    background-color: black;
+    color: red;
+}
+
+.accessYour{
+    margin-bottom: .8rem;
+}
+
+.signIn{
+    border: 2px solid rgb(53, 52, 52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: .5rem;
+    margin-top: -35rem;
+    visibility: hidden;
+}
+
+.signInDisplay{
+    border: 2px solid rgb(53, 52, 52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: .5rem;
+    margin-top: -35rem;
+    visibility: visible;
+    animation: display 1s linear 1 normal forwards;
+}
+@keyframes display {
+    0%{opacity: 0;}
+    50%{opacity: 50%}
+    100%{opacity: 100%;}   
+}
+
+.signInHeader{
+    border: 1px solid rgb(53, 52, 52);
+    background-color: black;
+    color: gray;
+    margin-top: -2.5rem;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+}   
+
 
 
 

@@ -21,12 +21,11 @@ closebookForm();
 const vipbttnUp = document.getElementById("vipbttnUp");
 if(vipbttnUp){
     const observerbttnUp = new IntersectionObserver(entries => {
-        
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                vipbttnUp.classList.add("vipbttnUp");
+                vipbttnUp.classList.add("vipbttn");
             } else {
-                vipbttnUp.classList.remove("vipbttnUp");
+                vipbttnUp.classList.remove("vipbttn");
             }
         });
     });
@@ -201,7 +200,7 @@ if(fleetGallery) {
 */
 let basket = JSON.parse(localStorage.getItem("data")) || []
 
-    // LIKE BUTTON FUNCS
+// LIKE BUTTON FUNCS
 let addToCollection = (id) => {
     let selectedItem = id;
     let search = basket.find((elem) => elem.id === id);
@@ -263,29 +262,27 @@ let share = (id) => {
  * ! MAP GEO LOCATION API
  */
 
-// function initMap () {
-//     let option = {
-//         zoom: 11,
-//         center: {lat: 35.1340053, lng: -81.0202533}
-//     }
+function initMap() {
+    let option = {
+        zoom: 11,
+        center: {lat: 35.1340053, lng: -81.0202533}
+    }
 
-//     if(map){
-//         const map = new google.maps.Map(document.getElementById("map"), option)
+    const map = document.getElementById("map");
+    if (map) {
+        const googleMap = new google.maps.Map(map, option);
 
+        let marker = new google.maps.Marker({
+            position: {lat: 35.220592, lng: -80.85156},
+            map: googleMap
+        });
 
-//         let marker = new google.maps.Marker({
-//             position: {lat: 35.220592, lng:-80.85156},
-//             map:map
-//         })
-    
-//         let infoWindow = new google.maps.InfoWindow({
-//             content: '<h1>1212 Address St</h1>'
-//         })
-    
-//         marker.addListener("click", function(){
-//             infoWindow.open(map, marker)
-//         })
-//     }
+        let infoWindow = new google.maps.InfoWindow({
+            content: '<h1>1212 Address St</h1>'
+        });
 
-   
-// }
+        marker.addListener("click", function() {
+            infoWindow.open(googleMap, marker);
+        });
+    }
+}

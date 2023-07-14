@@ -136,7 +136,7 @@ nav{
     display: flex;
     justify-content: space-around;
 }
-.navLinks li a:hover{
+.navLinks li a:hover , .locationContact a:hover{
     color: red;
 }
 .bookNowBttn{
@@ -148,6 +148,11 @@ nav{
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.5rem;
+}
+.bookNowBttn:hover{
+    background-color: black;
+    color: red;
+    border: 1px solid red;
 }
 
 /**
@@ -683,6 +688,7 @@ form label{
     margin-top: 100px;
     display: flex;
     flex-direction: column;
+    transition: margin-top 1s ease-in-out;
 }
 .connectForm{
     display: flex;

@@ -228,11 +228,12 @@ if (selectedItem) {
             <button>SEND</button>
           </form>
         </div>
-        <a href="bigGallery"><button class="reservebttn">RESERVE NOW</button></a>
+        <a id="showReservBox"><button class="reservebttn">RESERVE NOW</button></a>
       </div>
     </div>
-    <div class="reserveVehicle">
-      <p>Bookyour</p>
+    <div id="reserveVehicle" class="reserveVehicle">
+      <p style="color: black">Bookyour</p>
+      <i id="closeForm" class="fa-solid fa-circle-xmark"></i>
       <h3>VEHICLE</h3>
       <form id="reservationForm" class="reservationForm" action="">
         <fieldset class="yourInfo">
@@ -269,7 +270,7 @@ if (selectedItem) {
         <button style="width: 7rem; margin-top: 10px; height: 2rem; border-radius: 5px; cursor: pointer; color: red;">Submit</button>
       </form>
     </div>
-    <div class="specification">
+    <div id="specification" class="specification">
       <div class="abt">
         <p>Vehicle</p>
         <h3>SPECIFICATIONS</h3>
@@ -281,7 +282,7 @@ if (selectedItem) {
       <div class="aboutVehicle">
         <p>About</p>
         <h3>THIS VEHICLE</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptate cumque quod doloribus hic, veritatis velit blanditiis numquam nesciunt adipisci magni atque id autem praesentium ex amet obcaecati maxime facere.</p>
+        <p>${selectedItem.about}</p>
       </div>
     </div>
   `;
@@ -314,13 +315,68 @@ if (selectedItem) {
 }  
 
 
+const showReservBox = document.getElementById("showReservBox");
+const reserveVehicle = document.getElementById("reserveVehicle");
+const closeForm = document.getElementById("closeForm");
 
-  
+if (showReservBox) {
+  showReservBox.addEventListener("click", () => {
+    reserveVehicle.classList.add("reserveVehicleDisplay");
+  });
+}
 
-  
-  
-  
-  
-  
-  
+if (closeForm) {
+  closeForm.addEventListener("click", () => {
+    reserveVehicle.classList.remove("reserveVehicleDisplay");
+  });
+}
 
+
+/**
+*! REGISTRATION AND SIGN IN FORM 
+**/
+
+//REGESTER FORM
+const regester = document.getElementById("regester");
+const regesterBttn = document.getElementById("regesterBttn");
+const closeRegisForm = document.getElementById("closeRegisForm");
+
+if (regester) {
+  regesterBttn.addEventListener("click", () => {
+    regester.classList.add("regesterdisplay");
+  });
+}
+
+if(regester) {
+  closeRegisForm.addEventListener("click", () => {
+    regester.classList.remove("regesterdisplay");
+  })
+}
+
+
+
+//SIGN IN FORM
+const signIn = document.getElementById("signIn")
+const signInBttn = document.getElementById("signInBttn")
+closeSignInForm = document.getElementById("closeSignInForm")
+
+if(signIn) {
+  signInBttn.addEventListener("click", () => {
+    signIn.classList.add("signInDisplay")
+  })
+}
+
+if(signIn) {
+  closeSignInForm.addEventListener("click", () => {
+    signIn.classList.remove("signInDisplay")
+  })
+}
+
+const goRegester = document.getElementById("goRegester")
+
+if(goRegester) {
+  goRegester.addEventListener("click", () => {
+    signIn.classList.remove("signInDisplay")
+    regester.classList.add("regesterdisplay");
+  })
+}

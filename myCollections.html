@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>My Collections</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style/styleTwo.css">
     <link rel="stylesheet" href="style/styleThree.css">
@@ -42,8 +42,49 @@
         </div>        
     </nav>
 
-    <section id="galleryWrapper" class="bigGalleryWrapper">
-            
+    <section class="myCollections">
+        <h1>My Collection</h1>
+        <p>Introducing My Collection, the contemporary solution for efficient car inventory searches, designed to simplify your vehicle selection process. With our personalized features, you can now tailor your vehicle search based on your recent views and saved cars. By signing up for our Alerts tool, you will receive email notifications about price changes or sold cars. Additionally, our Auto Locator tool will keep you informed when a desired vehicle becomes available in our inventory. Experience the convenience of My Collection and enjoy finding your perfect vehicle effortlessly.</p>
+
+        <div class="regesterSignIn">
+            <button id="regesterBttn">Register</button>
+            <button id="signInBttn">Sign In</button>
+        </div>
+    </section>
+
+    <section class="regesAndSignInForm">
+        <form id="regester" class="regester" action="">
+            <i id="closeRegisForm" style="margin-left: 20rem; margin-top: -1.5rem; font-size: 2rem;" class="fa-solid fa-circle-xmark"></i>
+            <div class="regesHeader">
+                <h2>MY GARAGE</h2>
+                <h2>REGISTRATION</h2>
+            </div>
+            <div class="makeTheMost">
+                <p>MAKE THE MOST OF YOUR SHOPPING EXPERIENCE BY <br> CREATING <br> AN ACCOUNT. YOU CAN:</p>
+            </div>
+            <div class="accessYour">
+                <p>ACCESS YOUR SAVED CARS ON ANY DEVICE. <br>
+                RECEIVE PRICE ALERT EMAILS WHEN PRICE CHANGES, <br>
+                NEW OFFERS BECOME AVAILABLE OR A VEHICLE IS SOLD.</p>
+            </div>
+            <input type="text" id="regFirstName" placeholder="First Name*" required>
+            <input type="text" id="regLastName" placeholder="Last Name*" required>
+            <input type="email" id="regEmail" placeholder="Email*" required>
+            <input type="Phone" id="regPhone" placeholder="Phone*" required>
+            <button id="regesterBttn" class="regesterBttn">Submit</button>
+        </form>
+
+        <form id="signIn" class="signIn" action="">
+            <i id="closeSignInForm" style="margin-left: 20rem; margin-top: -1.5rem; font-size: 2rem;" class="fa-solid fa-circle-xmark"></i>
+            <div class="signInHeader">
+                <h2>MY GARAGE</h2>
+                <h2>SIGN IN</h2>
+            </div>
+            <p>NOT REGISTERED? <a id="goRegester" href="#regester">CLICK HERE</a></p>
+
+            <input type="email" name="" id="signInEmail" placeholder="Email" required>
+            <button id="loginbttn" class="loginbttn">Log In</button>
+        </form>
     </section>
 
     <section id="address" class="connect">
@@ -74,6 +115,8 @@
         </div>
         
     </section>
+    
+
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTFD6cotc2_uhwOVx_ccLCUHuHzwDy_WA&callback=initMap"
     async defer></script>

@@ -11,7 +11,8 @@ let carData = [{
         "images/New-2018-Lamborghini-Huracan-1.webp",
         "images/New-2018-Lamborghini-Huracan-16.webp",
         "images/New-2018-Lamborghini-Huracan-.webp"
-    ],  
+    ],
+    about: "Get the VIP experience from this Lamborghini Huracan. Combining the highest expression of Lamborghinis power with the exclusive refinement of Italian handicraft, this series embodies authentic design and state-of-the-art mechanical technology. The Lamborghini Huracn is the perfect fusion of technology and design. With its crisp, streamlined lines, designed to cut through the air and tame the road, youll get a thrill just by looking at it. The only thing better than taking in this beauty from a distance is actually touching it. The finest Italian craftsmanship lavished on finishes of unprecedented prestige and quality."  
 },
 
 { 
@@ -29,7 +30,8 @@ let carData = [{
         "images/2021-Lamborghini-Urus-167.webp",
         "images/2021-Lamborghini-Urus-16795.webp",
         "images/2021-Lamborghini-Urus-1679.webp"
-    ]
+    ],
+    about: "Get the VIP experience from this Lamborghini Urus SUV. The urus is the ultimate combination of luxury and performance. Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghinis 4.0-liter twin-turbo V8 engine, the Urus is all about a performance mindset that brings together fun-to-drive and astounding vehicle capabilities. The design, performance, driving dynamics and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA."
 },
 
 {   
@@ -48,7 +50,8 @@ let carData = [{
         "images/New-2018-Rolls-Royce-Dawn-1679523143 (4).webp",
         "images/New-2018-Rolls-Royce-Dawn-1679523143 (5).webp",
         "images/New-2018-Rolls-Royce-Dawn-1679523143 (6).webp",
-    ]    
+    ],
+    about: "Get the VIP experience from this Rolls Royce Dawn. Drop the top while riding in ultimate luxury. Our Rolls Royce dawn is sure to impress. This Dawn delivers one of the smoothest rides possible while still turning heads."    
 },
 
 {   id: "4",
@@ -64,7 +67,8 @@ let carData = [{
         "images/New-2019-McLaren-570S-1679522868 (2).webp",
         "images/New-2019-McLaren-570S-1679522868 (3).webp",
         "images/New-2019-McLaren-570S-1679522868 (4).webp",
-    ]  
+    ],
+    about: "Get the VIP experience from this McLaren 570S. Its the ultimate sports car experience. Completely driver-centric and performance oriented, the McLaren 570S Coup is equally at home on the track as it is on the open road. The McLaren 570S is the lightest sportscar in its class and has the highest power to weight ratio, it delivers super car punch and thrills that would shame many more expensive rivals."  
 },
 
 {   id: "5",
@@ -83,7 +87,8 @@ let carData = [{
         "images/New-2021-Mercedes-Benz-G63-1679522896 (4).webp",
         "images/New-2021-Mercedes-Benz-G63-1679522896 (5).webp",
         "images/New-2021-Mercedes-Benz-G63-1679522896 (6).webp",
-    ] 
+    ],
+    about:"Get the VIP experience from this Mercedes Benz G63 AMG. With 577 handcrafted horses, the AMG G 63 is a legend raised to a higher power for a new era. Advanced luxury, unwavering confidence, and extensive individualization let you create a G that's at ease in any corner of the world."
 },
 
 {
@@ -100,7 +105,8 @@ let carData = [{
         "images/New-2021-Mercedes-Benz-S580-1679523083 (2).webp",
         "images/New-2021-Mercedes-Benz-S580-1679523083 (3).webp",
         "images/New-2021-Mercedes-Benz-S580-1679523083 (4).webp",
-    ] 
+    ],
+    about: "Get the VIP experience from this Mercedes Benz S580. The 2022 S-Class is thoughtfully equipped, carefully crafted, and groundbreaking from personalization to protection. The 496-hp, electrically boosted S 580 4MATIC Sedan is here to inspire drivers and automakers the world over. Enjoy a smooth ride on any rode in this 5 seater luxury sedan." 
 },
 
 {
@@ -117,7 +123,8 @@ let carData = [{
         "images/New-2022-Mercedes-Benz-GLS-600-Maybach-1679523113 (2).webp",
         "images/New-2022-Mercedes-Benz-GLS-600-Maybach-1679523113 (3).webp",
         "images/New-2022-Mercedes-Benz-GLS-600-Maybach-1679523113 (4).webp",
-    ]
+    ],
+    about: "Get the VIP experience from this Maybach GLS 600. First-class travel takes on a fine form with the Mercedes-Maybach GLS 600. The standard-setting 'S-Class of SUVs' is heightened with an exquisitely furnished, expansively indulgent cabin and a tapestry of luxury innovations."
 },
 
 { 
@@ -135,7 +142,8 @@ let carData = [{
         "images/Used-2018-Ferrari-488-Spider-1684157787 (3).jpg",
         "images/Used-2018-Ferrari-488-Spider-1684157787 (5).jpg",
         "images/Used-2018-Ferrari-488-Spider-1684157787 (4).jpg",
-    ]
+    ],
+    about: "Get the VIP experience from this Ferrari 488 Spider. Drop the top this summer and enjoy the sound of the twin turbo V8 screaming through Charlotte. This one of a kind Ferrari is sure to give you the thrill of speed while also delivering the luxurious experience. Now is the chance to drive the car you have dreamed of."
 },
 
 {
@@ -151,5 +159,6 @@ let carData = [{
         "images/Used-2020-Mercedes-Benz-AMG-GT63-1684128840 (1).jpg",
         "images/Used-2020-Mercedes-Benz-AMG-GT63-1684128840 (2).jpg",
         "images/Used-2020-Mercedes-Benz-AMG-GT63-1684128840 (3).jpg",
-    ]
+    ],
+    about: "Get the VIP experience from this Mercedes Benz AMG GT63. This 4-door AMG GT has opened a new chapter in driving passion. A 4.0L V8 BiTurbo engine and AMG Performance. Its cabin is specially appointed to share a wealth of luxury among four fortunate occupants."
 }]
