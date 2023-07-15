@@ -256,11 +256,11 @@ let share = (id) => {
     let shareForm = document.getElementById(`share-${id}`);
     shareForm.classList.toggle("shareDisplay");
 };
-  
+
 
 /***
- * ! MAP GEO LOCATION API
- */
+* ! MAP GEO LOCATION API
+*/
 
 function initMap() {
     let option = {
@@ -286,3 +286,4 @@ function initMap() {
         });
     }
 }
+initMap(); 
