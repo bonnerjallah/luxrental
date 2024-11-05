@@ -139,66 +139,114 @@ function ScrollRight() {
 let fleetGallery = document.getElementById("fleetGallery");
 
 let GenerateCarDataPic = () => {
+    let fleetGallery = document.getElementById('fleetGallery');  // Ensure the gallery container exists
+    if (!fleetGallery) return;  // Stop if the element doesn't exist
+
     let carDataCard = carData.map((elem) => {
-        let {id, img, year, name, price, exterior, interior, transmission, engine } = elem;
-        return `
-        <a href="bigGallery.html?id=${id}"><div id="product-id-${id}" class="imagebox cardItem">
-                <img src=${img[0]} alt="">
-                <div class="discriptionbox">
-                    <div class="discrip"><a href="bigGallery.html?id=${id}">
-                        <div class="nameYear">
-                            <p class="year">${year}</p>
-                            <p class="name">${name}</p>
-                        </div> 
-                        <div class="priceBox">
-                            <p>Starting At</p>
-                            <p class="price">$ ${price}</p>   
-                        </div>                   
-                    </div>
-                    <div class="discripTwo">
-                        <div class="abt">
-                            <p>Engine: <span class="engi">${engine}</span><p>
-                            <p>Transmission: <span class="trans">${transmission}</span></p>
-                            <p>Interior: <span class="inte">${interior}</span></p>
-                            <p>Exterior: <span class="exte">${exterior}</span></p>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="reserve">
-                    <div class="cardLike">
-                        <button id="save-${id}" onclick="addToCollection(${id})"><i class="fa-regular fa-heart"></i> Save</button>
-                        <button onclick="textToPhone(${id})"><i class="fa-regular fa-file-lines"> Text To Phone</i></button>
-                        <form id="textMsg-${id}" class="textmsg" action="">
-                            <input type="number" placeholder="1+(---) --- ----" inputmode="numeric required">
-                            <button style="background-color: red;"><i class="fa-solid fa-arrow-right"></i></button>
-                        </form>
-                        <button onclick="share(${id})"><i class="fa-solid fa-at"> Share</i></button>
-                        <form id="share-${id}" class="share" action="">
-                            <input type="emal" id="fromEmail" placeholder="Email From*" required>
-                            <input type="emal" id="sendToEmail" placeholder="Email To*" required>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <div class="attachImg">
-                                <input type="checkbox" id="attach"> 
-                                <label for="attach">ATTACH VEHICLE IMAGES</label>
-                            </div>
-                            <button>SEND</button>
-                        </form>
-                        </div>
-                            <a href="bigGallery.html?id=${id}"><button class="reservebttn">RESERVE NOW</button></a>
-                        </div>
-                    </div>
-                </div>               
-            </div></a>
-        `;
-    })
-    .join("");
+        let { id, img, year, name, price, exterior, interior, transmission, engine } = elem;
 
-    fleetGallery.innerHTML = carDataCard;
+        // Create the HTML structure
+        let card = document.createElement('div');
+        card.classList.add('imagebox', 'cardItem');
+        card.id = `product-id-${id}`;
 
+        let imgElement = document.createElement('img');
+        imgElement.src = img[0];  // First image from the array
+        imgElement.alt = name;
+
+        let descriptionBox = document.createElement('div');
+        descriptionBox.classList.add('discriptionbox');
+
+        let description = document.createElement('div');
+        description.classList.add('discrip');
+        
+        let nameYearDiv = document.createElement('div');
+        nameYearDiv.classList.add('nameYear');
+        
+        let yearElement = document.createElement('p');
+        yearElement.classList.add('year');
+        yearElement.textContent = year;
+        
+        let nameElement = document.createElement('p');
+        nameElement.classList.add('name');
+        nameElement.textContent = name;
+
+        nameYearDiv.appendChild(yearElement);
+        nameYearDiv.appendChild(nameElement);
+
+        let priceBoxDiv = document.createElement('div');
+        priceBoxDiv.classList.add('priceBox');
+        
+        let priceText = document.createElement('p');
+        priceText.textContent = 'Starting At';
+        
+        let priceElement = document.createElement('p');
+        priceElement.classList.add('price');
+        priceElement.textContent = `$ ${price}`;
+
+        priceBoxDiv.appendChild(priceText);
+        priceBoxDiv.appendChild(priceElement);
+
+        description.appendChild(nameYearDiv);
+        description.appendChild(priceBoxDiv);
+
+        let descriptionTwo = document.createElement('div');
+        descriptionTwo.classList.add('discripTwo');
+        
+        let abtDiv = document.createElement('div');
+        abtDiv.classList.add('abt');
+
+        let engineElement = document.createElement('p');
+        engineElement.innerHTML = `Engine: <span class="engi">${engine}</span>`;
+        
+        let transmissionElement = document.createElement('p');
+        transmissionElement.innerHTML = `Transmission: <span class="trans">${transmission}</span>`;
+        
+        let interiorElement = document.createElement('p');
+        interiorElement.innerHTML = `Interior: <span class="inte">${interior}</span>`;
+        
+        let exteriorElement = document.createElement('p');
+        exteriorElement.innerHTML = `Exterior: <span class="exte">${exterior}</span>`;
+
+        abtDiv.appendChild(engineElement);
+        abtDiv.appendChild(transmissionElement);
+        abtDiv.appendChild(interiorElement);
+        abtDiv.appendChild(exteriorElement);
+
+        descriptionTwo.appendChild(abtDiv);
+
+        descriptionBox.appendChild(description);
+        descriptionBox.appendChild(descriptionTwo);
+
+        let reserveDiv = document.createElement('div');
+        reserveDiv.classList.add('reserve');
+
+        let reserveButton = document.createElement('a');
+        reserveButton.href = `bigGallery.html?id=${id}`;
+        let reserveBtnElement = document.createElement('button');
+        reserveBtnElement.classList.add('reservebttn');
+        reserveBtnElement.textContent = 'RESERVE NOW';
+        reserveButton.appendChild(reserveBtnElement);
+
+        reserveDiv.appendChild(reserveButton);
+
+        card.appendChild(imgElement);
+        card.appendChild(descriptionBox);
+        card.appendChild(reserveDiv);
+
+        return card;
+    });
+
+    // Append each car card to the gallery container
+    fleetGallery.innerHTML = '';  // Clear previous content
+    carDataCard.forEach(card => fleetGallery.appendChild(card));
 };
-if(fleetGallery) {
+
+// Call the function to generate the cards
+if (document.getElementById('fleetGallery')) {
     GenerateCarDataPic();
 }
+
 
 
 /**
