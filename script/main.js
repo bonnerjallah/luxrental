@@ -1,3 +1,10 @@
+// main.js
+const data = require('./data');
+const helper = require('./helper');
+
+// Your app logic here using data and helper
+
+
 /***
  * !NAV BAR MODEL
  */
