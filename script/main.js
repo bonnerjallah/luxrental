@@ -110,7 +110,6 @@ if(scrollRight) {
     });
 }
 
-
 function ScrollLeft() {
     let fleetGallery = document.getElementById("fleetGallery");
     fleetGallery.scrollTo({
@@ -195,7 +194,7 @@ if(fleetGallery) {
 }
 
 
-/***
+/**
 * ! SHOPBASKET, LIKE, TEXT AND SHARE FUNCS
 */
 let basket = JSON.parse(localStorage.getItem("data")) || []
@@ -235,10 +234,10 @@ let calcAmount = () => {
 
 // Set the 'Save' button styles after the page has fully loaded
 window.addEventListener("load", () => {
-  basket.forEach((item) => {
-    let save = document.getElementById(`save-${item.id}`);
-    save.style.color = "red";
-  });
+    basket.forEach((item) => {
+        let save = document.getElementById(`save-${item.id}`);
+        save.style.color = "red";
+    });
 });
 
 calcAmount()
