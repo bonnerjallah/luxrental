@@ -1,4 +1,4 @@
-let carData = [{
+window.carData = [{
     id: "1",
     year: "2022",
     name:"Lamborghini Huracan",
