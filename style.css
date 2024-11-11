@@ -1,18 +1,14 @@
-*{
+*, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    height: 100vh;
     background-color: black;
-    position: relative;
+    width: 100dvw;
 }
-@media(max-width: 700px){
-    body{width: 100vw}
-    
-}
+
 
 a{
     text-decoration: none;
@@ -30,10 +26,7 @@ nav{
     background-color: rgb(5, 5, 21);
     z-index: 20;
 }
-@media(max-width: 700px){
-    nav{font-size: .5rem; width:100vw}
 
-}
 .logo{
     height: 100%;
 }
@@ -47,16 +40,6 @@ nav{
 
 .bookForm{
     position: absolute;
-    background-color: rgba(65, 90, 119, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 10px;
-    margin-top: 550px;
-    margin-left: 145px;
-    height: 400px;
-    width: 400px;
     visibility: hidden;
 }
 
@@ -68,10 +51,9 @@ nav{
     align-items: center;
     flex-direction: column;
     row-gap: 10px;
-    margin-top: 550px;
-    margin-left: 145px;
+    top: 6rem;
+    right: 1rem;
     height: 400px;
-    width: 400px;
     border-radius: 10px;
     visibility: visible;
     animation: close 1s cubic-bezier(.17,.27,.76,.4)  1 normal forwards;
@@ -272,6 +254,9 @@ nav{
 **/
 .gallerySection{
     position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .fleetGallery{
@@ -296,28 +281,12 @@ nav{
 .imagebox img{
     width: 100%;
 }
-@media (max-width: 700px) {
-    .gallerySection {
-      width: 100%;
-    }
-  
-    .fleetGallery {
-      width: 90%;
-      height: auto; /* Adjust the height as needed for smaller screens */
-      overflow: auto;
-    }
-  
-    .imagebox {
-      min-width: 80px;
-      width: rem;
-      height: unset; /* Adjust the height as needed for smaller screens */
-    }
-  
-    .imagebox img {
-      width: 100%;
-      height: auto; /* Adjust the height as needed for smaller screens */
-    }
-  }
+
+.arrowwrapper{
+    background-color: yellow;
+    z-index: 2;
+}
+
 .fa-angles-left{
     position: absolute;
     font-size: 2.5rem;
@@ -334,17 +303,13 @@ nav{
     position: absolute;
     font-size: 2.5rem;
     top: 240px;
-    margin-left: 1210px;
+    right: 0rem;
     color: rgb(254, 253, 253);
     cursor: pointer;
     border-radius: 50%;
-    padding: 5px;  
     z-index: 1;
 }
-@media(max-width: 700px){
-    .fa-angles-left{margin-top: -170px; font-size: 1.5rem;}
-    .fa-angles-right{margin-top: -170px; font-size: 1.5rem; margin-right: 300px;}
-}
+
 
 /**
 *! GALLERY CARD STYLE
@@ -571,7 +536,7 @@ input[type="number"]::-webkit-outer-spin-button {
     position: relative;
     color: white;
     display: grid;
-    grid-template-columns: repeat(2, 40% 60%);
+    grid-template-columns: repeat(2, 40% 50%);
 }
 .formcontainer{
     height: 20%;
@@ -653,6 +618,9 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+    word-wrap: break-word;
+    display: flex;
+    flex-wrap: wrap;
 }
 @media(max-width: 700px){
     .chauffeur p{margin-left: 5px}
@@ -750,26 +718,26 @@ form label{
 }
 @media (max-width: 700px) {
     .teamSection {
-      width: 100%;
-      margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
     }
-  
+
     .revCard {
-      width: 90%;
-      height: auto; /* Adjust the height as needed for smaller screens */
-      overflow: auto;
-      margin: 10px;
+    width: 90%;
+    height: auto; /* Adjust the height as needed for smaller screens */
+    overflow: auto;
+    margin: 10px;
     }
-  
+
     .revCommt p {
-      font-size: .5rem;
-      width: rem;
-      height: unset; /* Adjust the height as needed for smaller screens */
+    font-size: .5rem;
+    width: rem;
+    height: unset; /* Adjust the height as needed for smaller screens */
     }
-  
+
     .revCard img {
-      width: 100%;
-      height: auto; /* Adjust the height as needed for smaller screens */
+    width: 100%;
+    height: auto; /* Adjust the height as needed for smaller screens */
     }
 }
 
@@ -777,17 +745,17 @@ form label{
 *! CONNECT SECTION
 **/
 .connect{
-    height: 600px;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    transition: margin-top 1s ease-in-out;
+    padding: 0 2rem;
 }
+
 .connectForm{
     display: flex;
+    flex-shrink: 1;
     flex-direction: column;
     row-gap: 20px;
-    margin-left: 20px;
+    width: max-content;
 }
 .connectForm input{
     height: 40px;
@@ -804,13 +772,16 @@ form label{
     color: white;
     display: flex;
     flex-direction: column;
-    padding-top: 100px;
-    padding-left:40px ;
     gap: 10px;
+    width: 100%;
+    height: max-content;
+    margin: 0 auto;
+
 }
 .connectFormContainer{
     display: grid;
-    grid-template-columns: repeat(3, 30% 15% 50%);
+    grid-template-columns: 1fr 1fr 1fr; 
+
 }
 .socialMedia{
     display: flex;
@@ -821,4 +792,12 @@ form label{
 .map{
     width: 100%;
     height: 100%;
+    
+}
+
+@media(300px <= width <= 500px) {
+
+    .map{
+        display: none;
+    }
 }

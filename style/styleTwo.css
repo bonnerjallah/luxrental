@@ -16,6 +16,7 @@
     height: 80px;
     gap: 10px;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .rentalOptions{
@@ -43,6 +44,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    background-color: rgba(10, 10, 10, 0.9);
     row-gap: 20px;
     width: 20%;
     font-size: 1.2rem;
@@ -59,16 +61,19 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    width: 20%;
     font-size: 1.2rem;
     padding: 10px;
     color: white;
     align-self: center;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: rgba(11, 10, 10, 0.9);
     border-radius: 10px;
     animation: displayBox 1s linear  1 normal forwards;
     visibility: visible;
+    width: max-content;
+    margin-left: 10rem;
+    height: 40%;
 }
+
 @keyframes displayBox {
     0% {
         height: 50px;
@@ -179,7 +184,6 @@
     background-size: cover;
     filter: grayscale(90%);
     opacity: 35%;
-    border: 2px solid green;
     height: 100vh;
 }
 
@@ -188,6 +192,7 @@
     flex-direction: column;
     margin-top: -450px;
     padding: 20px;
+    /* border: 2px solid green; */
 }
 .theExperienceContainer h1{
     color: red;
@@ -239,6 +244,8 @@
     padding: 10px;
     filter: grayscale(50%);
     cursor: pointer;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .roadSide::before,
@@ -304,6 +311,8 @@
     padding: 10px;
     filter: grayscale(50%);
     cursor: pointer;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .fa-rocket{
@@ -329,6 +338,8 @@
     padding: 10px;
     filter: grayscale(50%);
     cursor: pointer; 
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .expressReservation{
     background-image: url(../images/andrey-zvyagintsev-cj8RKNAN1jY-unsplash.jpg);
@@ -341,6 +352,8 @@
     padding: 10px;
     filter: grayscale(50%);
     cursor: pointer;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .vipMemProg{
     background-image: url(../images/kristin-wilson-alEMgpX6oo8-unsplash.jpg);
@@ -353,6 +366,8 @@
     padding: 10px;
     filter: grayscale(50%);
     cursor: pointer;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .regbutton{
     width: 200px;
